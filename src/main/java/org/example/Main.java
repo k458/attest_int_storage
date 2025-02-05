@@ -142,12 +142,11 @@ public class Main {
 
         byte[] bytes = new byte[strings.length];
         for (int i = 0; i < strings.length; i++) {
-            bytes[i] = (byte) Integer.parseInt(strings[i], 2);  // Convert binary string to byte
+            bytes[i] = (byte) Integer.parseInt(strings[i], 2);
         }
 
         String path = "file3bytes";
         try (FileOutputStream fos = new FileOutputStream(path)) {
-            // Write the byte array to the file
             fos.write(bytes);
         } catch (IOException e) {
             e.printStackTrace();
